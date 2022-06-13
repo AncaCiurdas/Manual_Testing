@@ -98,13 +98,14 @@ Authorization token was created for accessing the API
 # 1.6	Test Execution
 
 Test cases are executed on the created test Cycle summary:\
-https://github.com/AncaCiurdas/Manual_Testing/blob/6b5e40eb3361478271d26a875a04bbc3bc363642/Manual%20Testing_final_project/Cycle_Summar_AddEmployee.ods \
+https://github.com/AncaCiurdas/Manual_Testing/blob/380efd6b09734180551ed232335e9028217767d7/Manual%20Testing_final_project/Cycle_Summary_AddEmployee.xlsx \
 Bugs have been created based on the failed tests. The complete bug report can be found here:
-https://github.com/AncaCiurdas/Manual_Testing/blob/02533c83fc9ad8ae192d531fb7abec16a4e8173e/Manual%20Testing_final_project/Jira_Export-Bug_Report.xlsx
+https://github.com/AncaCiurdas/Manual_Testing/blob/380efd6b09734180551ed232335e9028217767d7/Manual%20Testing_final_project/Jira_Export-Bug_Report.xlsx
 
-API tests are executed based on the checklist. https://github.com/AncaCiurdas/Manual_Testing/blob/main/Manual%20Testing_final_project/api_tests_checklist.txt \
-The collection used can be found here:
-https://github.com/AncaCiurdas/Manual_Testing/blob/79c6e237a669119ba3cb92640a6dccb27e51e555/Manual%20Testing_final_project/Add%20Employee.postman_collection.json
+API tests are executed based on the checklist.\
+https://github.com/AncaCiurdas/Manual_Testing/blob/380efd6b09734180551ed232335e9028217767d7/Manual%20Testing_final_project/API_checklist.xlsx \
+The collection used can be found here:\
+https://github.com/AncaCiurdas/Manual_Testing/blob/380efd6b09734180551ed232335e9028217767d7/Manual%20Testing_final_project/Add%20Employee.postman_collection.json
 
 Full regression testing is needed after the bugs are fixed!
 
@@ -120,7 +121,7 @@ A number of 8 total bugs were found, from which the priority is: 1 is low, 2 are
  # 2.	SQL section
 
 Created a database named 'orangehrm' and a table named 'employee' with all the columns needed to save data per specifications. Performed different queries inside the sql file:\
-https://github.com/AncaCiurdas/Manual_Testing/blob/8a4aaa604273e316455fefc8ea8f4f08add49ab0/Manual%20Testing_final_project/orangeHRM_employees.sql.sql
+https://github.com/AncaCiurdas/Manual_Testing/blob/380efd6b09734180551ed232335e9028217767d7/Manual%20Testing_final_project/orangeHRM_employees.sql.sql
 
 
 
