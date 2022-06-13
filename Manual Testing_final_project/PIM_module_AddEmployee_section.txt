@@ -1,0 +1,70 @@
+PIM module
+
+The PIM module can be found on main page, it is the second option in the main menu.
+This module is structured in several sections, such as:
+
+•	Configuration section
+•	Employee List section
+•	Add Employee section
+•	Reports section
+
+The functionality of the PIM Module differs depending on the rights of the user.
+
+The HR can:
+•	Configure optional/custom fields, data import from CSV, define reporting methods and termination reasons that will be used throughout the module.
+•	View all employee details
+•	Add employee on the list.
+•	Generate employee report
+
+ESS-Supervisor can
+•	View his personal details as well as his/her subordinates.
+
+ESS-Employee:
+•	Has no access to the PIM module but can view his personal details under the ‘MyInfoModule.
+
+Add Employee section
+
+A new employee is added to the system here. Other than importing details this feature allows to add an employee and define a very informative profile.
+To add an employee, go to PIM>>Add Employee;
+The basic color of the Add Employee section is orange.
+In the menu, when a section is selected it turns gray
+
+Add Employee section contains the following fields:
+
+•	Full Name:
+First Name-> mandatory; input that accepts 30 characters length maximum (any characters from numerical, alphabetical upper and lower case)
+Middle Name-> Optional; input that accepts 30 characters length maximum (any characters from numerical, alphabetical upper and lower case)
+Last Name-> mandatory; input that accepts 30 characters length maximum (any characters from numerical, alphabetical upper and lower case)
+
+•	Employee Id-> mandatory; Employee Id is generated automatically, but can be changed if required; accept only numeric characters.
+
+•	Photograf-> To add a picture, click on “ChooseFile” and select the picture from the relevant path and click “Open”. Accepts jpg, .png, .gif up to 1MB. Recommended dimensions: 200px X 200px;
+
+*Note: Please note that the maximum file size of the picture cannot exceed 1 megabyte.
+
+You may also create a user login for the employee through this screen
+By clicking on Create login Details checkbox the following fields are visible:
+Required fields are marcked whith “*”
+
+Click “Save” button once completed.
+
+Once you click Save button the employee is added on Employee List.
+Once you click “Save”, the Personal Details section of the employee you created will automatically appear.
+
+API
+
+How to authenticate
+
+It's a Bearer token authentication
+before you can use the API you need to create an OAuth client from the OrangeHRM web UI in Admin > Configuration > Register OAuth Client by giving it secure id and secret/password.
+In order to authenticate, a POST request is fired to {your-host}/index.php/oauth/issueToken (in my case http://127.0.0.1/orangehrm-4.0/symfony/web/index.php/oauth/issueToken)
+the request takes parameters client_id, client_secret, grant_type , where
+client_id = [the oauth ID you've created]; client_secret = [the oauth secret you've created]; grant_type = 'client_credentials'
+
+The response looks like {"access_token":"ecdc9f1c565ce501f25c7b9a1b17d4d254d35f50","expires_in":3600,"token_type":"bearer","scope":null}
+now you can call the API with an Authorisation header: {[token_type] [access_token]} (e.g. Authorisation: "Bearer ecdc9f1c565ce501f25c7b9a1b17d4d254d35f50" at http://{your-host}/api/v1/* 
+
+Documentation
+
+Rest API docs are avaliable in https://orangehrm.github.io/orangehrm-api-doc 
+

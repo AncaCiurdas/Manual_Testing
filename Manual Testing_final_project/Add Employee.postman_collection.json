@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "8abd6c16-d8a0-48e9-aef0-83120267bc87",
+		"name": "Add Employee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Employee Details",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 0d8b30d96869d8e2d2dbf69e823e8163c4e344f4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://opensource-demo.orangehrmlive.com//api/v1/employee/74",
+					"protocol": "https",
+					"host": [
+						"opensource-demo",
+						"orangehrmlive",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"v1",
+						"employee",
+						"74"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IssueToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 8af89b356cf70659b291af739ddeee54a61acb80",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"client_id\":\"01.06.22.id\",\r\n    \"client_secret\":\"01.06.22.secret\",\r\n    \"grant_type\":\"client_credentials\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://opensource-demo.orangehrmlive.com//index.php/oauth/issueToken",
+					"protocol": "https",
+					"host": [
+						"opensource-demo",
+						"orangehrmlive",
+						"com"
+					],
+					"path": [
+						"",
+						"index.php",
+						"oauth",
+						"issueToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaveEmployee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 0d8b30d96869d8e2d2dbf69e823e8163c4e344f4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " { \r\n    \"firstName\":\"Andreea\",\r\n    \"middleName\": \"Ioana\",\r\n    \"lastName\": \"Popan\",\r\n    \"code\": \"1234\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://opensource-demo.orangehrmlive.com/api/v1/employee/70?=",
+					"protocol": "https",
+					"host": [
+						"opensource-demo",
+						"orangehrmlive",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"v1",
+						"employee",
+						"70"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateEmployee",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 0d8b30d96869d8e2d2dbf69e823e8163c4e344f4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"firstName\":\"Andreea\",\r\n    \"middleName\": \"Ioana\",\r\n    \"lastName\": \"Medan\",\r\n    \"code\": \"1234\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://opensource-demo.orangehrmlive.com//api/v1/employee/74",
+					"protocol": "https",
+					"host": [
+						"opensource-demo",
+						"orangehrmlive",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"v1",
+						"employee",
+						"74"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 0d8b30d96869d8e2d2dbf69e823e8163c4e344f4",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://opensource-demo.orangehrmlive.com//api/v1/user",
+					"protocol": "https",
+					"host": [
+						"opensource-demo",
+						"orangehrmlive",
+						"com"
+					],
+					"path": [
+						"",
+						"api",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
