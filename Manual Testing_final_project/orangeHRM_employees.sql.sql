@@ -156,6 +156,7 @@ select * from employees where dateOfBirth like "198%" and salary = "1000";
 -- Select all employees whose firstName is not Tom --
 select * from employees where firstName !="Tom"; 
 
+                                  -- Aggregate functions --
 -- Select the maximum salary-- 
 select max(salary) from employees;
 
@@ -164,6 +165,12 @@ select min(salary) from employees;
 
 -- Select the average salary --
 select avg(salary) from employees;
+
+select sum(salary) from employees;
+select count(salary) from employees;
+select count(*) from employees;
+select count(*) from department;
+select count(*) from employeedepartment;
 
 -- Select 2 columns: select, lastName and salary from employees;--
 select lastName, salary from employees;
@@ -205,8 +212,8 @@ values ("211","112","1"),
 
 select * from employeedepartment;
 
--- set primary key and foregin key for the tables--
--- add primary key for columns: employeeId, departmentId, employeedepartmentId --
+                -- set primary key and foregin key for the tables--
+				-- add primary key for columns: employeeId, departmentId, employeedepartmentId --
 alter table employees
 add primary key (employeeId);
 
@@ -216,7 +223,7 @@ add primary key (departmentId);
 alter table employeedepartment
 add primary key (employeedepartmentId);
 
--- add foregin key for collumns: employeeId, departmentId-- 
+                     -- add foregin key for collumns: employeeId, departmentId-- 
 alter table employeedepartment
 add constraint fk_employeedepartment_department foreign key employeedepartment (departmentId) references department (departmentId);
 
@@ -239,7 +246,7 @@ on employees.employeeId=department.departmentId;
 select *from employees inner join department
 on employees.employeeId=department.departmentId;
 
--- ORDER BY--
+                                     -- ORDER BY--
 -- select all employees from employees table order by dateOfBirth--
 select * from employees
 order By dateOfBirth;
@@ -249,7 +256,15 @@ order by salary;
 -- select all employees from employees table order By salary desc--
 select *from employees
 order By salary desc;
+                                      -- Group By-- 
+select sum(salary) from employees
+group by departmentId;
 
+select firstName, lastName, sum(salary) from employees
+group by departmentId;
+
+select departmentId, sum(salary) from employees
+group by departmentId;
 
 
 
