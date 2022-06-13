@@ -121,7 +121,7 @@ A number of 8 total bugs were found, from which the priority is: 1 is low, 2 are
  # 2.	SQL section
 
 Created a database named 'orangehrm' and a table named 'employee' with all the columns needed to save data per specifications. Performed different queries inside the sql file:\
-https://github.com/AncaCiurdas/Manual_Testing/blob/380efd6b09734180551ed232335e9028217767d7/Manual%20Testing_final_project/orangeHRM_employees.sql.sql
+https://github.com/AncaCiurdas/Manual_Testing/blob/fe837ab6a9c553bddb89b616049cb64e03193f28/Manual%20Testing_final_project/orangeHRM_employees.sql.sql
 
 
 
