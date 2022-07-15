@@ -47,13 +47,13 @@ Tests not in scope: White-Box testing, performance testing, integrations of the 
 1.1.5	Risks detected
 
 •	Project risks:
-- Lack of experience of the QA team
-- 	Short deadline of Zephyr Squad trial
-- 	Unavailability of test environment
-- 	Requirements may not be defined well enough
+	- Lack of experience of the QA team
+	- Short deadline of Zephyr Squad trial
+	- Unavailability of test environment
+	- Requirements may not be defined well enough
 
 •	Product risks:
--	Validation constraints on the fields might be too restrictive to the end user
+	- Validation constraints on the fields might be too restrictive to the end user
 
 1.1.6	Evaluating entry criteria
 The entry criterias defined in the Test Planning phase have been achieved and the test process can continue.
