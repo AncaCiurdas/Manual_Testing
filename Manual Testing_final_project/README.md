@@ -40,7 +40,7 @@ The plan identifies the items to be tested, the features to be tested, the types
 •	no detected major risk remained un-mitigated\
 •	exploratory regression testing must be performed on the PIM module, which includes the Add Emploee section;
 
-1.1.4	Test scope
+1.1.4	Test scope\
 Tests in scope: All the features of Add Employee which were defined in software requirement specs need to be tested: functional testing, GUI testing and API testing\
 Tests not in scope: White-Box testing, performance testing, integrations of the PIM module - Add Employee Section with other modules, compatibility testing with multiple browsers
 
